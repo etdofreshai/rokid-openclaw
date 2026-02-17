@@ -1,0 +1,67 @@
+# Android / Kotlin / Android Studio
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Android Studio captures folder
+/captures
+
+# IntelliJ IDEA
+*.iws
+*.ipr
+out/
+
+# Keystore files — NEVER commit these
+*.jks
+*.keystore
+keystore.properties
+
+# Google Services
+google-services.json
+
+# Firebase
+.firebase/
+
+# Secrets / config
+secrets.properties
+config.local.xml
+**/src/main/res/values/config.local.xml
+
+# Node / npm (if any tooling)
+node_modules/
+npm-debug.log
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Linux
+*~
+
+# CMake
+.externalNativeBuild/
+cmake-build-*/
