@@ -99,11 +99,28 @@ Go give Clawsses a ⭐!
 
 ---
 
+## 🔄 Self-Update System
+
+The glasses app includes a built-in dynamic code loader that checks for updates on every launch:
+
+1. **On launch**, the `LoaderActivity` checks the GitHub releases API for the latest version
+2. **If an update is available**, the HUD prompts: "Update available v1.2 — Tap to update / Skip"
+3. **On update**, it downloads the new code bundle (DEX) from the release assets
+4. **Loads dynamically** via `DexClassLoader` — no reinstall needed
+5. **Fallback**: if offline or check fails, launches the last downloaded (or built-in) version
+
+This means the app can self-update without needing to sideload a new APK. Just publish a new GitHub release with a `.dex` or `.jar` asset.
+
+The loader UI matches the green-on-black monochrome aesthetic of the 480×640 micro-LED display.
+
+---
+
 ## 📁 Project Structure
 
 ```
 rokid-openclaw/
 ├── glasses-app/        # Standalone glasses app (Kotlin/Jetpack Compose)
+│   └── src/main/java/.../loader/  # Self-update loader (static entry point)
 ├── phone-app/          # Future: phone companion for Rokid Max/AR line
 ├── shared/             # Protocol definitions & data models
 └── README.md
